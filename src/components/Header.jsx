@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
-import { MdKeyboardArrowDown } from "react-icons/md";
+import { MdKeyboardArrowDown, MdKeyboardArrowUp } from "react-icons/md";
 
 import { images } from "../constants";
 
@@ -38,15 +38,15 @@ const NavItem = ({ item }) => {
             onClick={dropHandler}
             className="px-4 py-2 flex gap-x-1 items-center">
             <span>{item.name}</span>
-            <MdKeyboardArrowDown />
+            {drop ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}
           </button>
           <span className="text-blue-500 absolute transition-all duration-500 font-bold right-0 top-2 group-hover:right-[90%] opacity-0 group-hover:opacity-100">
             /
           </span>
           <div
             className={`${
-              drop ? "block" : "hidden"
-            } lg:hidden transition-all duration-500 pt-4 lg:p-0 lg:absolute lg:bottom-0 lg:right-0 lg:transform lg:translate-y-full lg:group-hover:block w-max`}>
+              drop ? " max-h-full opacity-100 pt-4" : "max-h-0 opacity-0 pt-0"
+            } lg:hidden transition-all duration-500 lg:p-0 lg:absolute lg:bottom-0 lg:right-0 lg:transform lg:translate-y-full lg:group-hover:block w-max`}>
             <ul className="flex text-center bg-dark-soft lg:bg-white flex-col shadow-lg rounded-lg overflow-hidden">
               {item.items.map((page, ind) => (
                 <React.Fragment key={ind}>
@@ -77,9 +77,8 @@ const Header = () => {
 
   return (
     <section
-      className={`sticky top-0 left-0 z-50 right-0 ${
-        navIsVisible ? "" : "backdrop-blur-md"}`}>
-      <header className="container mx-auto px-5 flex justify-between py-4 items-center">
+      className={`sticky top-0 left-0 z-50 right-0 bg-white lg:bg-transparent lg:backdrop-blur`}>
+      <header className=" px-5 flex justify-between py-4 items-center">
         <div>
           <img className="w-16" src={images.Logo} alt="logo" />
         </div>
@@ -95,8 +94,8 @@ const Header = () => {
         </div>
         <div
           className={`${
-            navIsVisible ? "right-0" : "-right-full"
-          } transition-all duration-300 mt-0 bg-gradient-to-br from-dark-soft to-blue-500 lg:from-transparent lg:to-transparent z-[48] flex flex-col w-full lg:w-auto justify-center lg:justify-end lg:flex-row fixed top-0 bottom-0 lg:static gap-x-9 items-center`}>
+            navIsVisible ? "right-0" : " -right-full"
+          } transition-all animate duration-1000 mt-[56px] lg:mt-0 bg-dark-hard lg:bg-transparent z-[49] flex flex-col w-full lg:w-auto justify-center lg:justify-end lg:flex-row fixed top-0 bottom-0 lg:static gap-x-9 items-center`}>
           <ul className=" text-white items-center gap-y-5 lg:text-dark-soft flex flex-col lg:flex-row gap-x-2 font-semibold">
             {navItemsInfo.map((item, ind) => (
               <NavItem key={ind} item={item} />

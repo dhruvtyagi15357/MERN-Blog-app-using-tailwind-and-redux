@@ -5,13 +5,13 @@ import Articles from './container/Articles'
 
 const HomePage = () => {
   return (
-    <div>
-        <MainLayout>
-          <Hero />
-          <Articles/>
-        </MainLayout>
+    <div className=" container mx-auto">
+      <MainLayout>
+        <Hero />
+        <Articles />
+      </MainLayout>
     </div>
-  )
+  );
 }
 
 export default HomePage

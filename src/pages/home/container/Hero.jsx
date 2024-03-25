@@ -24,13 +24,13 @@ const Tagitem = ({ tag }) => {
 
 const Hero = () => {
   return (
-    <section className="container align- flex flex-col mx-auto text-text-dark p-5 md:flex-row md:justify-between">
+    <section className="container flex flex-col mx-auto text-text-dark p-5 md:flex-row md:justify-between">
       <div className="mt-10 self-center lg:w-1/2 min-w-[50%] ">
-        <h1 className=" font-roboto text-3xl text-center font-bold text-dark-soft sm:text-5xl lg:text-left lg:max-w-[54]">
+        <h1 className=" font-roboto text-3xl text-center font-bold text-dark-soft sm:text-5xl lg:text-left lg:max-w-[540px]">
           {" "}
           Lorem ipsum dolor sit amet.
         </h1>
-        <p className=" text-text-dark mt-[14%]">
+        <p className=" text-text-dark mt-4 lg:mt-6  lg:text-left">
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos,
           et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
           aspernatur doloribus tenetur laboriosam porro quaerat fugiat magni
@@ -40,9 +40,17 @@ const Hero = () => {
           animi exercitationem, repellendus suscipit nesciunt maiores mollitia
           consequatur eaque ratione. Debitis quam provident autem minima
           quaerat, veniam dignissimos eligendi ut consectetur odit atque,
-          mollitia qui nobis officia sunt. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque repellat facere labore reiciendis nulla, sint ex fugiat ipsa consequuntur minima. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem sint, ducimus aspernatur itaque quos modi a pariatur dicta sequi, accusamus esse eveniet deserunt? Consequatur optio qui architecto perferendis suscipit. Reiciendis ut aliquam optio dicta. Veritatis voluptas, laudantium possimus quis dolores nam a ducimus vero ipsum, cum deserunt dolorem facilis delectus!
+          mollitia qui nobis officia sunt. Lorem ipsum dolor, sit amet
+          consectetur adipisicing elit. Eaque repellat facere labore reiciendis
+          nulla, sint ex fugiat ipsa consequuntur minima. Lorem, ipsum dolor sit
+          amet consectetur adipisicing elit. Dolorem sint, ducimus aspernatur
+          itaque quos modi a pariatur dicta sequi, accusamus esse eveniet
+          deserunt? Consequatur optio qui architecto perferendis suscipit.
+          Reiciendis ut aliquam optio dicta. Veritatis voluptas, laudantium
+          possimus quis dolores nam a ducimus vero ipsum, cum deserunt dolorem
+          facilis delectus!
         </p>
-        <div className="flex flex-col gap-y-2.5 mt-7 relative">
+        <div className="flex flex-col xl:mt-10 gap-y-2.5 mt-10 lg:mt-6 relative">
           <div className="relative">
             <FiSearch className=" absolute left-3 top-1/2 -translate-y-1/2 w-6 h-6 text-[#959EAD]" />
             <input
