@@ -10,10 +10,10 @@ const ArticleCard = ({ className }) => {
         src={images.card}
         alt=""
         srcSet=""
-        className="w-full object-cover object-center h-auto md:h-52"
+        className="w-full object-cover object-center h-auto md:h-52 lg:h-48 xl:h-60"
       />
       <div className="p-5">
-        <h2 className=" font-roboto font-bold text-xl md:text-2xl text-text-dark">
+        <h2 className=" font-roboto font-bold text-xl md:text-2xl text-text-dark lg:text-[28px]">
           Lorem ipsum dolor sit.
         </h2>
         <p className=" text-text-soft mt-3 text-sm md:text-lg">
