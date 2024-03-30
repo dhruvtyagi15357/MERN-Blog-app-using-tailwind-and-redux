@@ -77,7 +77,7 @@ const Header = () => {
 
   return (
     <section
-      className={`sticky top-0 left-0 z-50 right-0 bg-white lg:bg-transparent lg:backdrop-blur`}>
+      className={`sticky top-0 left-0 z-50 right-0 bg-white lg:bg-transparent lg:backdrop-blur-[10px]`}>
       <header className=" px-5 flex justify-between py-4 items-center">
         <div>
           <img className="w-16" src={images.Logo} alt="logo" />
